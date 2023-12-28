@@ -1,0 +1,28 @@
+{
+  "name": "flounder.studio",
+  "version": "0.0.0",
+  "description": "Digital color depth pattern maker for Web Browser",
+  "scripts": {
+    "build all": "node ./nephila/build.js ../../build.json release",
+    "build wip all": "node ./nephila/build.js ../../build.json wip.release",
+    "build html": "node ./nephila/build.js ../../build.json none",
+    "build light style": "sass --no-charset style/theme.light.scss style/theme.light.css",
+    "build dark style": "sass --no-charset style/theme.dark.scss style/theme.dark.css",
+    "build script": "tsc -p ./script/tsconfig.json",
+    "watch script": "tsc --watch -p ./script/tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wraith13/flounder.studio.git"
+  },
+  "author": "wraith13",
+  "license": "BSL-1.0",
+  "bugs": {
+    "url": "https://github.com/wraith13/flounder.studio/issues"
+  },
+  "homepage": "https://github.com/wraith13/flounder.studio",
+  "devDependencies": {
+    "sass": "^1.69.5",
+    "typescript": "^5.3.3"
+  }
+}

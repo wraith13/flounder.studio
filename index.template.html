@@ -1,0 +1,64 @@
+<html>
+<!--
+    __BUILD_MESSAGE__
+    build options: __BUILD_OPTIONS__
+    build at: __BUILD_TIMESTAMP__
+    repository: __REPOSITORY_URL_
+-->
+<!-- license:
+__LICENSE__-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,viewport-fit=contain">
+<meta name="theme-color" content="#228844">
+<meta name="description" lang="en" content="__EN_DESCRIPTION__">
+<meta name="description" lang="ja" content="__JA_DESCRIPTION__">
+<meta name="apple-mobile-web-app-title" content="Flounder Studio">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta http-equiv="Cache-Control" content="public,stale-while-revalidate=2592000,stale-if-error=2592000"><!-- 2592000s == 30d -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wraith13">
+<!-- meta name="twitter:creator" content="@wraith13" -->
+<meta name="twitter:title" content="__APPLICATION_TITLE__">
+<meta name="twitter:description" content="Cyclic ToDo Static Web Application">
+<meta name="twitter:image" content="https://wraith13.github.io/cyclic-todo/image/cyclictodobox.1024.png">
+<title>__APPLICATION_TITLE__</title>
+<link id="favicon" rel="shortcut icon" href="./image/cyclictodohex.1024.png">
+<link rel="apple-touch-icon" href="./image/cyclictodohex-ios.1024.png">
+<style type="text/css" id="style">
+__PRIMARY_STYLE__
+</style>
+<style type="text/css" id="style">
+__LIGHT_STYLE__
+</style>
+<style type="text/css" id="style">
+__DARK_STYLE__
+</style>
+<script type="text/javascript">
+__EVIL_COMMONJS__
+</script>
+<script type="text/javascript">
+__EVIL_TIMER__
+</script>
+<script type="text/javascript">
+__SCRIPT__
+</script>
+</head>
+<body onload="require('script/index').CyclicToDo.start({ buildTimestamp: '__BUILD_TIMESTAMP__', buildTimestampTick: __BUILD_TIMESTAMP_TICK__, })" class="auto">
+<div id="foundation"></div><div id="screen" class="welcome-screen screen slow-fadein"><h1 id="screen-header" class="segmented"><a class="segment last-segment" href="http://oscar.local/cyclic-todo/"><div class="icon">__APPLICATION_ICON__</div><div class="segment-title">__APPLICATION_TITLE__</div></a></h1><div id="screen-body" class="screen-body">
+<noscript>
+<div class="poem error-poem">
+<span class="poem-title">NOSCRIPT</span>
+<span class="poem-subtitle">JavaScript is disabled / JavaScript が無効になっています</span>
+<span class="poem-description">This page is a static web app and requires JavaScript. / このページは Static Web アプリで JavaScript が必要です。</span>
+<span class="poem-image">💣</span>
+</div>
+</noscript>
+__POEM_HTML__
+<div class="bottom-line version-information">build timestamp: __BUILD_TIMESTAMP__</div>
+</div><div id="screen-footer" class="screen-footer"></div></div><div id="screen-toast"></div></div>
+<div id="images" style="display: none;">__IMAGES__</div>
+<div id="emojis" style="display: none;">__EMOJIS__</div>
+</body>
+</html>
