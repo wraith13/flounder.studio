@@ -6,7 +6,7 @@
         {
             "parameters":
             {
-                "__APPLICATION_TITLE__": { "json": "./resource/CONFIG.json", "value": "applicationTitle" },
+                "__APPLICATION_TITLE__": { "json": "./resource/config.json", "value": "applicationTitle" },
                 "__BUILD_MESSAGE__": "This file is genereted by build.js. このファイルは build.js によって生成されました。",
                 "__BUILD_OPTIONS__": { "call": "command_options" },
                 "__BUILD_TIMESTAMP__": { "call": "timestamp" },
