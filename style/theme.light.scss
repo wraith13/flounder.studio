@@ -1,0 +1,12 @@
+@import "params.scss";
+$tektite-main-color: $black-color;
+$tektite-base-color: $white-color;
+$tektite-popup-background-alpha:88;
+$tektite-popup-background-contrast:0.8;
+$tektite-popup-background-brightness:5.0;
+body.light
+{
+    @import "index.scss";
+    @include tektite-light-trait;
+}
+@import "../nephila/tektite.js/style/tektite-root.scss";

@@ -4,7 +4,6 @@
   "description": "Digital color depth pattern maker for Web Browser",
   "scripts": {
     "build all": "node ./nephila/build.js ../../build.json release",
-    "build wip all": "node ./nephila/build.js ../../build.json wip.release",
     "build html": "node ./nephila/build.js ../../build.json none",
     "build light style": "sass --no-charset style/theme.light.scss style/theme.light.css",
     "build dark style": "sass --no-charset style/theme.dark.scss style/theme.dark.css",

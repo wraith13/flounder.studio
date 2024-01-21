@@ -1,9 +1,9 @@
-import { minamo } from "../nephila/minamo.js";
-import { flounderStyle } from "../flounder.style.js";
-import { Tektite } from "../nephila/tektite.js/script/tektite-index";
-import { TektiteDate } from "../nephila/tektite.js/script/tektite-date";
-import { ViewModel } from "../nephila/tektite.js/script/tektite-view-model.js";
-import { ViewRenderer } from "../nephila/tektite.js/script/tektite-view-renderer";
+import { minamo } from "@nephila/minamo.js";
+import { flounderStyle } from "flounder.style.js";
+import { Tektite } from "@nephila/tektite.js/script/tektite-index";
+import { TektiteDate } from "@nephila/tektite.js/script/tektite-date";
+import { ViewModel } from "@nephila/tektite.js/script/tektite-view-model.js";
+import { ViewRenderer } from "@nephila/tektite.js/script/tektite-view-renderer";
 
 export module flounderStudio
 {
