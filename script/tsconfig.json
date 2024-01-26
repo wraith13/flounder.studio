@@ -32,8 +32,12 @@
         "resolveJsonModule": true,
         "outFile": "index.js",
         "paths": {
-            "@nephila/*": [ "../nephila/*", ],
-            "flounder.style.js": [ "../flounder.style.js", ],
+            "@nephila/*": [ "../nephila/*" ],
+            "tektite.js/*": [ "../nephila/tektite.js/*" ],
+            "minamo.js": [ "../nephila/minamo.js" ],
+            "@resource/*": [ "../resource/*" ],
+            "@script/*": [ "../script/*" ],
+            "flounder.style.js": [ "../flounder.style.js" ]
         }
     },
     "files": [

@@ -1,11 +1,11 @@
-import { minamo } from "@nephila/minamo.js";
+import { minamo } from "minamo.js";
 import { flounderStyle } from "flounder.style.js";
-import { Tektite } from "@nephila/tektite.js/script/tektite-index";
-import { TektiteDate } from "@nephila/tektite.js/script/tektite-date";
-import { ViewModel } from "@nephila/tektite.js/script/tektite-view-model.js";
-import { ViewRenderer } from "@nephila/tektite.js/script/tektite-view-renderer";
+import { Tektite } from "tektite.js/script/tektite-index";
+import { TektiteDate } from "tektite.js/script/tektite-date";
+import { ViewModel } from "tektite.js/script/tektite-view-model.js";
+import { ViewRenderer } from "tektite.js/script/tektite-view-renderer";
 
-export module flounderStudio
+export module FlounderStudio
 {
     export const $make = minamo.dom.make;
     export const $tag = minamo.dom.tag;
