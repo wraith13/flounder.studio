@@ -2,7 +2,7 @@
 import { Type } from "@script/type";
 import { Base } from "@script/base";
 import { FlounderStudio } from "@script/index";
-// import config from "@resource/config.json";
+import config from "@resource/config.json";
 export module Domain
 {
     export const makePageParams = (application: Type.ApplicationType, item: Type.PageItemType): Type.PageParams =>
@@ -27,6 +27,11 @@ export module Domain
         },
         href
     );
+    export const getTitle = (data: Type.PageParams) =>
+    (
+        data.application ? Type.applicationList[data.application]?.title:
+        null
+    ) ?? config.applicationTitle;
     export const showUrl = async (data: Type.PageParams) =>
     {
         const url = Domain.makeUrl(data);
