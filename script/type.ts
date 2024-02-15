@@ -1,4 +1,5 @@
 import { Tektite } from "tektite.js/script/tektite-index";
+import { flounderStyle } from "flounder.style.js";
 import resource from "@resource/images.json";
 import tektiteResource from "tektite.js/images.json";
 import { minamo } from "minamo.js";
@@ -22,6 +23,7 @@ export module Type
     };
     export type ApplicationType = keyof typeof applicationList;
     export const applicationIdList = Object.freeze(minamo.core.objectKeys(applicationList));
+    export type PageItemType = flounderStyle.Arguments & minamo.core.JsonableObject;
 
     export interface ApplicationEntry//<ItemType>
     {
@@ -32,6 +34,8 @@ export module Type
     }
     export interface PageParams extends minamo.core.JsonableObject
     {
+        application?: Type.ApplicationType;
+        item?: Type.PageItemType;
         // hash?: string;
     }
     // export type TektiteParams = Tektite.ParamTypes<PageParams, Resource.KeyType, typeof localeEn | typeof localeJa, typeof FlounderStudio.localeMaster>;
