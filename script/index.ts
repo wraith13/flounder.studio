@@ -35,29 +35,17 @@ export module FlounderStudio
         const itemJson = hash[1];
         const application =
         {
-            "RainbowClock":
+            "Style":
             {
-                _show: async (item: Type.TimezoneEntry) => await RainbowClockRender.showRainbowClockScreen(item),
+                _show: async (item: Type.StyleEntry) => await RainbowClockRender.showRainbowClockScreen(item),
                 show: async (params: Type.PageParams) => await showRainbowClockScreen(params),
                 parseItem: (json: string) => Domain.parseTimezone(json),
             },
-            "CountdownTimer":
+            "SVG":
             {
-                _show: async (item: Type.AlarmEntry) => await CountdownTimerRender.showCountdownTimerScreen(item),
+                _show: async (item: Type.SvgEntry) => await CountdownTimerRender.showCountdownTimerScreen(item),
                 show: async (params: Type.PageParams) => await showWelcomeScreen(params),
                 parseItem: (json: string) => Domain.parseAlarm(json),
-            },
-            "ElapsedTimer":
-            {
-                _show: async (item: Type.EventEntry) => await ElapsedTimerRender.showElapsedTimerScreen(item),
-                show: async (params: Type.PageParams) => await showWelcomeScreen(params),
-                parseItem: (json: string) => Domain.parseEvent(json),
-            },
-            "NeverStopwatch":
-            {
-                _show: async (item: number) => await NeverStopwatchRender.showNeverStopwatchScreen(item),
-                show: async (params: Type.PageParams) => await showWelcomeScreen(params),
-                parseItem: (json: string) => Domain.parseStamp(json),
             },
         }[applicationType] ??
         {
