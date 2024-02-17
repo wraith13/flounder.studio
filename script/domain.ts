@@ -55,4 +55,30 @@ export module Domain
         }
         return null;
     };
+    export const validDataOrNull = <T>(validator: (data: any) => data is T, data: any) =>
+        validator(data) ? data: null;
+    export const isValidStyleEntry = (data: any): data is Type.StyleEntry =>
+    {
+        if (null !== data && undefined !== data && "object" === typeof data)
+        {
+            if (0 <= [ "trispot", "tetraspot", ].indexOf(data.type))
+            {
+                if (0 <= [ "regular", "alternative", 0].indexOf(data.LayoutAngle))
+                {
+                    return true;
+                }
+            }
+            else
+            if (0 <= [ "stripe", "diline", "triline", ].indexOf(data.type))
+            {
+                if (0 <= [ "regular", "alternative", ].indexOf(data.LayoutAngle) || "number" === typeof data.LayoutAngle)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    };
+    export const parseStyleEntry = (json: string): Type.StyleEntry | null =>
+        validDataOrNull(isValidStyleEntry, parseOrNull(json));
 }
