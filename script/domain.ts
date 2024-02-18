@@ -65,8 +65,8 @@ export module Domain
             {
                 if
                 (
-                    0 <= [ "regular", "alternative", 0].indexOf(data.LayoutAngle) &&
-                    0 === (data.anglePerDepth ?? 0)
+                    0 <= [ "regular", "alternative", 0, ].indexOf(data.LayoutAngle) &&
+                    0 <= [ undefined, 0, ].indexOf(data.anglePerDepth)
                 )
                 {
                     return true;
@@ -78,7 +78,7 @@ export module Domain
                 if
                 (
                     (0 <= [ "regular", "alternative", ].indexOf(data.LayoutAngle) || "number" === typeof data.LayoutAngle) &&
-                    "number" === (typeof data.anglePerDepth ?? 0)
+                    (undefined === data.anglePerDepth || "number" === typeof data.anglePerDepth)
                 )
                 {
                     return true;
