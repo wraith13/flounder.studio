@@ -63,7 +63,11 @@ export module Domain
         {
             if (0 <= [ "trispot", "tetraspot", ].indexOf(data.type))
             {
-                if (0 <= [ "regular", "alternative", 0].indexOf(data.LayoutAngle))
+                if
+                (
+                    0 <= [ "regular", "alternative", 0].indexOf(data.LayoutAngle) &&
+                    0 === (data.anglePerDepth ?? 0)
+                )
                 {
                     return true;
                 }
@@ -71,7 +75,11 @@ export module Domain
             else
             if (0 <= [ "stripe", "diline", "triline", ].indexOf(data.type))
             {
-                if (0 <= [ "regular", "alternative", ].indexOf(data.LayoutAngle) || "number" === typeof data.LayoutAngle)
+                if
+                (
+                    (0 <= [ "regular", "alternative", ].indexOf(data.LayoutAngle) || "number" === typeof data.LayoutAngle) &&
+                    "number" === (typeof data.anglePerDepth ?? 0)
+                )
                 {
                     return true;
                 }
