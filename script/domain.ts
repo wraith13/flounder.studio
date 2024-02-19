@@ -57,9 +57,32 @@ export module Domain
     };
     export const validDataOrNull = <T>(validator: (data: any) => data is T, data: any) =>
         validator(data) ? data: null;
+    export const isUndefined = (value: any): value is undefined => undefined === value;
+    export const isNumber = (value: any): value is number => "number" === typeof value;
+    export const isString = (value: any): value is number => "string" === typeof value;
+    export const isOr = <TypeA, TypeB>(isA: ((value: unknown) => value is TypeA), isB: ((value: unknown) => value is TypeB)) =>
+        (value: unknown): value is TypeA | TypeB => isA(value) || isB(value);
+    export const isUndefinedOrNumber = isOr(isUndefined, isNumber);
+    export const isUndefinedOrString = isOr(isUndefined, isString);
+    export const isAuto = (value: any): value is "auto" | "-auto" =>
+        0 <= [ "auto", "-auto", ].indexOf(value);
     export const isValidStyleEntry = (data: any): data is Type.StyleEntry =>
     {
-        if (null !== data && undefined !== data && "object" === typeof data)
+        if
+        (
+            null !== data && "object" === typeof data &&
+            isUndefinedOrNumber(data.offsetX) &&
+            isUndefinedOrNumber(data.offsetY) &&
+            isString(data.foregroundColor) &&
+            isUndefinedOrString(data.backgroundColor) &&
+            isUndefinedOrNumber(data.intervalSize) &&
+            isNumber(data.depth) &&
+            isUndefinedOrNumber(data.blur) &&
+            isUndefinedOrNumber(data.Pixel) &&
+            isOr(isUndefinedOrNumber, isAuto)(data.reverseRate) &&
+            isOr(isUndefinedOrNumber, isAuto)(data.anglePerDepth) &&
+            isUndefinedOrNumber(data.Count)
+        )
         {
             if (0 <= [ "trispot", "tetraspot", ].indexOf(data.type))
             {
@@ -77,8 +100,8 @@ export module Domain
             {
                 if
                 (
-                    (0 <= [ "regular", "alternative", ].indexOf(data.LayoutAngle) || "number" === typeof data.LayoutAngle) &&
-                    (undefined === data.anglePerDepth || "number" === typeof data.anglePerDepth)
+                    (0 <= [ "regular", "alternative", ].indexOf(data.LayoutAngle) || isNumber(data.LayoutAngle)) &&
+                    isOr(isUndefined, isNumber)(data.anglePerDepth)
                 )
                 {
                     return true;
