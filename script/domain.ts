@@ -57,52 +57,51 @@ export module Domain
     };
     export const validDataOrNull = <T>(validator: (data: any) => data is T, data: any) =>
         validator(data) ? data: null;
-    export const isUndefined = (value: any): value is undefined => undefined === value;
     export const isNumber = (value: any): value is number => "number" === typeof value;
     export const isString = (value: any): value is number => "string" === typeof value;
+    export const isValueType = <V>(cv: V) => (value: any): value is V => cv === value;
     export const isOr = <TypeA, TypeB>(isA: ((value: unknown) => value is TypeA), isB: ((value: unknown) => value is TypeB)) =>
         (value: unknown): value is TypeA | TypeB => isA(value) || isB(value);
-    export const isUndefinedOrNumber = isOr(isUndefined, isNumber);
-    export const isUndefinedOrString = isOr(isUndefined, isString);
+    export const isRegularOrAlternative = (value: any): value is "regular" | "alternative" =>
+        0 <= [ "regular", "alternative", ].indexOf(value);
     export const isAuto = (value: any): value is "auto" | "-auto" =>
         0 <= [ "auto", "-auto", ].indexOf(value);
+    export const isOptionalOr = <TypeA>(isA: ((value: unknown) => value is TypeA)) =>
+        (data: any, key: string) => ( ! (key in data) || isA(data[key]));
     export const isValidStyleEntry = (data: any): data is Type.StyleEntry =>
     {
         if
         (
             null !== data && "object" === typeof data &&
-            isUndefinedOrNumber(data.offsetX) &&
-            isUndefinedOrNumber(data.offsetY) &&
+            isOptionalOr(isNumber)(data, "offsetX") &&
+            isOptionalOr(isNumber)(data, "offsetY") &&
             isString(data.foregroundColor) &&
-            isUndefinedOrString(data.backgroundColor) &&
-            isUndefinedOrNumber(data.intervalSize) &&
+            isOptionalOr(isString)(data, "backgroundColor") &&
+            isOptionalOr(isNumber)(data, "intervalSize") &&
             isNumber(data.depth) &&
-            isUndefinedOrNumber(data.blur) &&
-            isUndefinedOrNumber(data.Pixel) &&
-            isOr(isUndefinedOrNumber, isAuto)(data.reverseRate) &&
-            isOr(isUndefinedOrNumber, isAuto)(data.anglePerDepth) &&
-            isUndefinedOrNumber(data.Count)
+            isOptionalOr(isNumber)(data, "blur") &&
+            isOptionalOr(isNumber)(data, "Pixel") &&
+            isOptionalOr(isOr(isNumber, isAuto))(data, "reverseRate") &&
+            isOptionalOr(isOr(isNumber, isAuto))(data, "anglePerDepth") &&
+            isOptionalOr(isNumber)(data, "Count")
         )
         {
             if (0 <= [ "trispot", "tetraspot", ].indexOf(data.type))
             {
                 if
                 (
-                    0 <= [ "regular", "alternative", 0, ].indexOf(data.LayoutAngle) &&
-                    0 <= [ undefined, 0, ].indexOf(data.anglePerDepth)
+                    isOptionalOr(isOr(isRegularOrAlternative, isValueType(0 as const)))(data, "LayoutAngle") &&
+                    isOptionalOr(isValueType(0 as const))(data, "anglePerDepth")
                 )
                 {
+                    data.layoutAngle
                     return true;
                 }
             }
             else
             if (0 <= [ "stripe", "diline", "triline", ].indexOf(data.type))
             {
-                if
-                (
-                    (0 <= [ "regular", "alternative", ].indexOf(data.LayoutAngle) || isNumber(data.LayoutAngle)) &&
-                    isOr(isUndefined, isNumber)(data.anglePerDepth)
-                )
+                if (isOptionalOr(isOr(isRegularOrAlternative, isNumber))(data, "LayoutAngle"))
                 {
                     return true;
                 }
