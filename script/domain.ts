@@ -68,6 +68,17 @@ export module Domain
         0 <= [ "auto", "-auto", ].indexOf(value);
     export const isOptionalOr = <TypeA>(isA: ((value: unknown) => value is TypeA)) =>
         (data: any, key: string) => ( ! (key in data) || isA(data[key]));
+    export interface ValidateResultEntry
+    {
+        key: string;
+        message: string;
+        actualData: unknown;
+    }
+    export interface ValidateResult
+    {
+        isValid: boolean; // === (this.result.length <= 0)
+        result: ValidateResultEntry[];
+    }
     export const isValidStyleEntry = (data: any): data is Type.StyleEntry =>
     {
         if
