@@ -71,7 +71,7 @@ export module Domain
     export interface ValidateResultEntry
     {
         key: string;
-        message: string;
+        requiredType: string;
         actualData: unknown;
     }
     export interface ValidateResult
@@ -79,22 +79,24 @@ export module Domain
         isValid: boolean; // === (this.result.length <= 0)
         result: ValidateResultEntry[];
     }
-    export const validateOptionalOr =
-        <TypeA>(isA: ((value: unknown) => value is TypeA)) =>
+    export const validateType =
+        (requiredType: ValidateResultEntry["requiredType"], isA: ((data: any, key: string) => boolean)) =>
         (data: any, key: string): ValidateResultEntry | null =>
         {
             var result: ValidateResultEntry | null = null;
-            if ( ! isOptionalOr(isA)(data, key))
+            if ( ! isA(data, key))
             {
                 result =
                 {
                     key,
-                    message: "must be optional or ...",
+                    requiredType,
                     actualData: data[key],
                 };
             }
             return result;
         };
+    export const validateNumber = validateType("number", (data: any, key: string) => isNumber(data[key]));
+    export const validateOptional = validateType("optional", (data: any, key: string) => ! (key in data));
     export const isValidStyleEntry = (data: any): data is Type.StyleEntry =>
     {
         if
