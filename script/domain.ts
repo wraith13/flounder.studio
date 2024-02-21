@@ -79,6 +79,22 @@ export module Domain
         isValid: boolean; // === (this.result.length <= 0)
         result: ValidateResultEntry[];
     }
+    export const validateOptionalOr =
+        <TypeA>(isA: ((value: unknown) => value is TypeA)) =>
+        (data: any, key: string): ValidateResultEntry | null =>
+        {
+            var result: ValidateResultEntry | null = null;
+            if ( ! isOptionalOr(isA)(data, key))
+            {
+                result =
+                {
+                    key,
+                    message: "must be optional or ...",
+                    actualData: data[key],
+                };
+            }
+            return result;
+        };
     export const isValidStyleEntry = (data: any): data is Type.StyleEntry =>
     {
         if
