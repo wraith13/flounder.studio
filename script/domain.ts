@@ -95,8 +95,22 @@ export module Domain
             }
             return result;
         };
-    export const validateNumber = validateType("number", (data: any, key: string) => isNumber(data[key]));
-    export const validateOptional = validateType("optional", (data: any, key: string) => ! (key in data));
+    export interface TypeValidator
+    {
+        requiredType: ValidateResultEntry["requiredType"];
+        isRequiredType: (data: any, key: string) => boolean;
+    }
+    export const numberValidator: TypeValidator =
+    {
+        requiredType: "number",
+        isRequiredType: (data: any, key: string) => isNumber(data[key]),
+    };
+    export const optionalValidator: TypeValidator =
+    {
+        requiredType: "optional",
+        isRequiredType: (data: any, key: string) => ! (key in data),
+    };
+    validateType("optional", (data: any, key: string) => ! (key in data));
     export const isValidStyleEntry = (data: any): data is Type.StyleEntry =>
     {
         if
