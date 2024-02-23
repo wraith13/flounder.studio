@@ -95,17 +95,31 @@ export module Domain
             }
             return result;
         };
-    export interface TypeValidator
+    export interface ValueTypeValidator
     {
         requiredType: ValidateResultEntry["requiredType"];
         isRequiredType: (data: any, key: string) => boolean;
     }
-    export const numberValidator: TypeValidator =
+    export interface ObjectTypeValidator
+    {
+        requiredType: ValidateResultEntry["requiredType"];
+        isRequiredMemberType:
+        {
+            [member: string]: TypeValidator
+        };
+    };
+    export interface ArrayTypeValidator
+    {
+        requiredType: ValidateResultEntry["requiredType"];
+        isRequiredItemType: (data: any, key: string) => boolean;
+    }
+    export type TypeValidator = ValueTypeValidator | ObjectTypeValidator | ArrayTypeValidator;
+    export const numberValidator: ValueTypeValidator =
     {
         requiredType: "number",
         isRequiredType: (data: any, key: string) => isNumber(data[key]),
     };
-    export const optionalValidator: TypeValidator =
+    export const optionalValidator: ValueTypeValidator =
     {
         requiredType: "optional",
         isRequiredType: (data: any, key: string) => ! (key in data),
