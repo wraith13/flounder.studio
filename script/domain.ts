@@ -100,17 +100,16 @@ export module Domain
         requiredType: ValidateResultEntry["requiredType"];
         isRequiredType: (data: any, key: string) => boolean;
     }
-    export const isValueTypeValidator = (value: unknown) =>
+    export const isValueTypeValidator = (value: unknown): value is ValueTypeValidator =>
         null !== value && "object" === typeof value &&
         "requiredType" in value && "string" === typeof value.requiredType &&
         "isRequiredType" in value && "function" === typeof value.isRequiredType;
-
     export interface ArrayTypeValidator
     {
         requiredType: ValidateResultEntry["requiredType"];
         isRequiredItemType: (data: any, key: string) => boolean;
     }
-    export const isArrayTypeValidator = (value: unknown) =>
+    export const isArrayTypeValidator = (value: unknown): value is ArrayTypeValidator =>
         null !== value && "object" === typeof value &&
         "requiredType" in value && "string" === typeof value.requiredType &&
         "isRequiredItemType" in value && "function" === typeof value.isRequiredItemType;
@@ -122,7 +121,15 @@ export module Domain
             [member: string]: TypeValidator
         };
     };
+    export const isObjectTypeValidator = (value: unknown): value is ObjectTypeValidator =>
+        null !== value && "object" === typeof value &&
+        "requiredType" in value && "string" === typeof value.requiredType &&
+        "isRequiredMemberType" in value &&
+            null !== value.isRequiredMemberType && "object" === typeof value.isRequiredMemberType &&
+            Object.keys(value.isRequiredMemberType).filter(member => ! isTypeValidator((value.isRequiredMemberType as any)[member])).length <= 0;
     export type TypeValidator = ValueTypeValidator | ObjectTypeValidator | ArrayTypeValidator;
+    export const isTypeValidator = (value: unknown): value is TypeValidator =>
+        isValidStyleEntry(value) || isArrayTypeValidator(value) || isObjectTypeValidator(value);
     export const StyleEntryValidator: ObjectTypeValidator =
     {
         requiredType: "Type.StyleEntry",
