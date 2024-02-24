@@ -105,6 +105,15 @@ export module Domain
         "requiredType" in value && "string" === typeof value.requiredType &&
         "isRequiredType" in value && "function" === typeof value.isRequiredType;
 
+    export interface ArrayTypeValidator
+    {
+        requiredType: ValidateResultEntry["requiredType"];
+        isRequiredItemType: (data: any, key: string) => boolean;
+    }
+    export const isArrayTypeValidator = (value: unknown) =>
+        null !== value && "object" === typeof value &&
+        "requiredType" in value && "string" === typeof value.requiredType &&
+        "isRequiredItemType" in value && "function" === typeof value.isRequiredItemType;
     export interface ObjectTypeValidator
     {
         requiredType: ValidateResultEntry["requiredType"];
@@ -113,11 +122,6 @@ export module Domain
             [member: string]: TypeValidator
         };
     };
-    export interface ArrayTypeValidator
-    {
-        requiredType: ValidateResultEntry["requiredType"];
-        isRequiredItemType: (data: any, key: string) => boolean;
-    }
     export type TypeValidator = ValueTypeValidator | ObjectTypeValidator | ArrayTypeValidator;
     export const StyleEntryValidator: ObjectTypeValidator =
     {
