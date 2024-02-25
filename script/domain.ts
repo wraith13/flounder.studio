@@ -142,12 +142,58 @@ export module Domain
         isValidStyleEntry(value) || isArrayTypeValidator(value) || isObjectTypeValidator(value);
     export const isRequiredMemberType = (isType: (value: unknown) => boolean) =>
         (data: any, key: string) => isType("" === (key ?? "") ? data: data[key]);
-    export const StyleEntryValidator: ObjectTypeValidator =
+    export const isRequiredMemberContantValueType = <T>(cv: T) => isRequiredMemberType(value => value === cv);
+    export const ContantValueTypeValidator = <T>(cv: T): ValueTypeValidator =>
+    ({
+        requiredType: JSON.stringify(cv),
+        isRequiredType: isRequiredMemberContantValueType(cv),
+    });
+    export const OptionalValidator: ValueTypeValidator =
+    {
+        requiredType: "optional",
+        isRequiredType: (data, key) => !(key in data),
+    };
+    export const StyleEntryValidator: OrTypeValidator =
     {
         requiredType: "Type.StyleEntry",
-        isRequiredMemberType:
-        {
-        },
+        isRequiredOrTypes:
+        [
+            {
+                requiredType: "FlounderStyle.SpotArguments",
+                isRequiredMemberType:
+                {
+                    type:
+                    {
+                        requiredType: "FlounderStyle.FlounderType",
+                        isRequiredOrTypes:
+                        [
+                            ContantValueTypeValidator("trispot"),
+                            ContantValueTypeValidator("tetraspot")
+                        ],
+                    },
+                    layoutAngle:
+                    {
+                        requiredType: "FlounderStyle.SpotArguments.layoutAngle?",
+                        isRequiredOrTypes:
+                        [
+                            OptionalValidator,
+                            ContantValueTypeValidator("regular"),
+                            ContantValueTypeValidator("alternative"),
+                            ContantValueTypeValidator(0)
+                        ],
+                    },
+                    anglePerDepth:
+                    {
+                        requiredType: "FlounderStyle.SpotArguments.anglePerDepth?",
+                        isRequiredOrTypes:
+                        [
+                            OptionalValidator,
+                            ContantValueTypeValidator(0)
+                        ],
+                    }
+                }
+            }
+        ],
     };
     export const numberValidator: ValueTypeValidator =
     {
