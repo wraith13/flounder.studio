@@ -127,9 +127,21 @@ export module Domain
         "isRequiredMemberType" in value &&
             null !== value.isRequiredMemberType && "object" === typeof value.isRequiredMemberType &&
             Object.keys(value.isRequiredMemberType).filter(member => ! isTypeValidator((value.isRequiredMemberType as any)[member])).length <= 0;
-    export type TypeValidator = ValueTypeValidator | ObjectTypeValidator | ArrayTypeValidator;
+    export interface OrTypeValidator
+    {
+        requiredType?: ValidateResultEntry["requiredType"];
+        isRequiredOrTypes: TypeValidator[];
+    };
+    export interface AndTypeValidator
+    {
+        requiredType?: ValidateResultEntry["requiredType"];
+        isRequiredAndTypes: TypeValidator[];
+    };
+    export type TypeValidator = ValueTypeValidator | ArrayTypeValidator | ObjectTypeValidator | OrTypeValidator | AndTypeValidator;
     export const isTypeValidator = (value: unknown): value is TypeValidator =>
         isValidStyleEntry(value) || isArrayTypeValidator(value) || isObjectTypeValidator(value);
+    export const isRequiredMemberType = (isType: (value: unknown) => boolean) =>
+        (data: any, key: string) => isType("" === (key ?? "") ? data: data[key]);
     export const StyleEntryValidator: ObjectTypeValidator =
     {
         requiredType: "Type.StyleEntry",
