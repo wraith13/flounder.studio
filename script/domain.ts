@@ -57,6 +57,7 @@ export module Domain
     };
     export const validDataOrNull = <T>(validator: (data: any) => data is T, data: any) =>
         validator(data) ? data: null;
+    export const isBoolean = (value: any): value is boolean => "boolean" === typeof value;
     export const isNumber = (value: any): value is number => "number" === typeof value;
     export const isString = (value: any): value is number => "string" === typeof value;
     export const isValueType = <V>(cv: V) => (value: any): value is V => cv === value;
@@ -153,13 +154,28 @@ export module Domain
         requiredType: "optional",
         isRequiredType: (data, key) => !(key in data),
     };
-    export const StyleEntryValidator: OrTypeValidator =
+    export const BooleanValidator: ValueTypeValidator =
+    {
+        requiredType: "boolean",
+        isRequiredType: (data, key) => isBoolean(data[key]),
+    };
+    export const NumberValidator: ValueTypeValidator =
+    {
+        requiredType: "number",
+        isRequiredType: (data, key) => isNumber(data[key]),
+    };
+    export const StringValidator: ValueTypeValidator =
+    {
+        requiredType: "string",
+        isRequiredType: (data, key) => isString(data[key]),
+    };
+    export const StyleEntryValidator: AndTypeValidator =
     {
         requiredType: "Type.StyleEntry",
-        isRequiredOrTypes:
+        isRequiredAndTypes:
         [
             {
-                requiredType: "FlounderStyle.SpotArguments",
+                requiredType: "FlounderStyle.ArgumentsBase",
                 isRequiredMemberType:
                 {
                     type:
@@ -168,7 +184,10 @@ export module Domain
                         isRequiredOrTypes:
                         [
                             ContantValueTypeValidator("trispot"),
-                            ContantValueTypeValidator("tetraspot")
+                            ContantValueTypeValidator("tetraspot"),
+                            ContantValueTypeValidator("stripe"),
+                            ContantValueTypeValidator("diline"),
+                            ContantValueTypeValidator("triline"),
                         ],
                     },
                     layoutAngle:
@@ -179,36 +198,67 @@ export module Domain
                             OptionalValidator,
                             ContantValueTypeValidator("regular"),
                             ContantValueTypeValidator("alternative"),
-                            ContantValueTypeValidator(0),
+                            NumberValidator,
                         ],
                     },
-                    anglePerDepth:
-                    {
-                        requiredType: "FlounderStyle.SpotArguments.anglePerDepth?",
-                        isRequiredOrTypes:
-                        [
-                            OptionalValidator,
-                            ContantValueTypeValidator(0),
-                        ],
-                    },
-                }
+        }
             },
             {
-                requiredType: "FlounderStyle.LineArguments",
-                isRequiredMemberType:
-                {
-                    type:
+                isRequiredOrTypes:
+                [
                     {
-                        requiredType: "FlounderStyle.FlounderType",
-                        isRequiredOrTypes:
-                        [
-                            ContantValueTypeValidator("stripe"),
-                            ContantValueTypeValidator("diline"),
-                            ContantValueTypeValidator("triline"),
-                        ],
+                        requiredType: "FlounderStyle.SpotArguments",
+                        isRequiredMemberType:
+                        {
+                            type:
+                            {
+                                requiredType: "FlounderStyle.SpotArguments.type",
+                                isRequiredOrTypes:
+                                [
+                                    ContantValueTypeValidator("trispot"),
+                                    ContantValueTypeValidator("tetraspot"),
+                                ],
+                            },
+                            layoutAngle:
+                            {
+                                requiredType: "FlounderStyle.SpotArguments.layoutAngle?",
+                                isRequiredOrTypes:
+                                [
+                                    OptionalValidator,
+                                    ContantValueTypeValidator("regular"),
+                                    ContantValueTypeValidator("alternative"),
+                                    ContantValueTypeValidator(0),
+                                ],
+                            },
+                            anglePerDepth:
+                            {
+                                requiredType: "FlounderStyle.SpotArguments.anglePerDepth?",
+                                isRequiredOrTypes:
+                                [
+                                    OptionalValidator,
+                                    ContantValueTypeValidator(0),
+                                ],
+                            },
+                        }
                     },
-                }
-            }
+                    {
+                        requiredType: "FlounderStyle.LineArguments",
+                        isRequiredMemberType:
+                        {
+                            type:
+                            {
+                                requiredType: "FlounderStyle.LineArguments.type",
+                                isRequiredOrTypes:
+                                [
+                                    ContantValueTypeValidator("stripe"),
+                                    ContantValueTypeValidator("diline"),
+                                    ContantValueTypeValidator("triline"),
+                                ],
+                            },
+                        }
+                    }
+                ],
+            },
         ],
     };
     export const numberValidator: ValueTypeValidator =
