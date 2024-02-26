@@ -179,7 +179,7 @@ export module Domain
                             OptionalValidator,
                             ContantValueTypeValidator("regular"),
                             ContantValueTypeValidator("alternative"),
-                            ContantValueTypeValidator(0)
+                            ContantValueTypeValidator(0),
                         ],
                     },
                     anglePerDepth:
@@ -188,9 +188,25 @@ export module Domain
                         isRequiredOrTypes:
                         [
                             OptionalValidator,
-                            ContantValueTypeValidator(0)
+                            ContantValueTypeValidator(0),
                         ],
-                    }
+                    },
+                }
+            },
+            {
+                requiredType: "FlounderStyle.LineArguments",
+                isRequiredMemberType:
+                {
+                    type:
+                    {
+                        requiredType: "FlounderStyle.FlounderType",
+                        isRequiredOrTypes:
+                        [
+                            ContantValueTypeValidator("stripe"),
+                            ContantValueTypeValidator("diline"),
+                            ContantValueTypeValidator("triline"),
+                        ],
+                    },
                 }
             }
         ],
