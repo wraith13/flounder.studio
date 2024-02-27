@@ -192,7 +192,7 @@ export module Domain
                     },
                     layoutAngle:
                     {
-                        requiredType: "FlounderStyle.SpotArguments.layoutAngle?",
+                        requiredType: "FlounderStyle.layoutAngle?",
                         isRequiredOrTypes:
                         [
                             OptionalValidator,
@@ -201,7 +201,25 @@ export module Domain
                             NumberValidator,
                         ],
                     },
-        }
+                    offsetX:
+                    {
+                        requiredType: "FlounderStyle.offsetX?",
+                        isRequiredOrTypes:
+                        [
+                            OptionalValidator,
+                            NumberValidator,
+                        ],
+                    },
+                    offsetY:
+                    {
+                        requiredType: "FlounderStyle.offsetY?",
+                        isRequiredOrTypes:
+                        [
+                            OptionalValidator,
+                            NumberValidator,
+                        ],
+                    },
+                }
             },
             {
                 isRequiredOrTypes:
