@@ -63,10 +63,6 @@ export module Domain
     export const isValueType = <V>(cv: V) => (value: any): value is V => cv === value;
     export const isOr = <TypeA, TypeB>(isA: ((value: unknown) => value is TypeA), isB: ((value: unknown) => value is TypeB)) =>
         (value: unknown): value is TypeA | TypeB => isA(value) || isB(value);
-    export const isRegularOrAlternative = (value: any): value is "regular" | "alternative" =>
-        0 <= [ "regular", "alternative", ].indexOf(value);
-    export const isAuto = (value: any): value is "auto" | "-auto" =>
-        0 <= [ "auto", "-auto", ].indexOf(value);
     export const isOptionalOr = <TypeA>(isA: ((value: unknown) => value is TypeA)) =>
         (data: any, key: string) => ( ! (key in data) || isA(data[key]));
     export interface ValidateResultEntry
@@ -140,7 +136,7 @@ export module Domain
     };
     export type TypeValidator = ValueTypeValidator | ArrayTypeValidator | ObjectTypeValidator | OrTypeValidator | AndTypeValidator;
     export const isTypeValidator = (value: unknown): value is TypeValidator =>
-        isValidStyleEntry(value) || isArrayTypeValidator(value) || isObjectTypeValidator(value);
+        isValueTypeValidator(value) || isArrayTypeValidator(value) || isObjectTypeValidator(value);
     export const isRequiredMemberType = (isType: (value: unknown) => boolean) =>
         (data: any, key: string) => isType("" === (key ?? "") ? data: data[key]);
     export const isRequiredMemberContantValueType = <T>(cv: T) => isRequiredMemberType(value => value === cv);
@@ -169,6 +165,10 @@ export module Domain
         requiredType: "string",
         isRequiredType: (data, key) => isString(data[key]),
     };
+    export const isRegularOrAlternative = (value: any): value is "regular" | "alternative" =>
+        0 <= [ "regular", "alternative", ].indexOf(value);
+    export const isAuto = (value: any): value is "auto" | "-auto" =>
+        0 <= [ "auto", "-auto", ].indexOf(value);
     export const StyleEntryValidator: AndTypeValidator =
     {
         requiredType: "Type.StyleEntry",
