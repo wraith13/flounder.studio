@@ -1,0 +1,1975 @@
+body.light * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  line-height: 100%;
+}
+body.light input, body.light select, body.light textarea {
+  color: #000022;
+  fill: #000022;
+  background-color: #FFFFFF;
+}
+body.light {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px !important;
+  font-family: ui-sans-serif, "ヒラギノ角ゴ Pro w4", Roboto, Meiryo;
+  font: -apple-system-body;
+  outline: none;
+  overflow: hidden;
+  color: #000022;
+  fill: #000022;
+  background-color: rgba(34, 136, 68, 0.95);
+}
+body.light a {
+  color: #228844;
+  fill: #228844;
+}
+body.light a:not(.tektite-link-button) {
+  cursor: pointer;
+}
+@media (hover: hover) {
+  body.light a:not(.tektite-link-button):not(:hover) {
+    text-decoration: none;
+  }
+}
+@media (hover: none) {
+  body.light a:not(.tektite-link-button) {
+    text-decoration: none;
+  }
+}
+@media (hover: hover) {
+  body.light a:not(.tektite-link-button):hover {
+    opacity: 1;
+    color: #6F7F00;
+    fill: #6F7F00;
+    text-decoration: underline;
+  }
+}
+body.light a.tektite-link-button {
+  text-decoration: none;
+}
+body.light ul {
+  display: block;
+  list-style-type: disc;
+  margin: 0px;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+  padding-inline-end: 1rem;
+  padding-inline-start: 2.5rem;
+}
+body.light h2 {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+body.light h1, body.light h2 {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  margin: 0px;
+  background-color: #228844;
+  text-decoration: none;
+}
+body.light label {
+  cursor: pointer;
+}
+@media (hover: hover) {
+  body.light label:hover {
+    color: #6F7F00;
+    fill: #6F7F00;
+  }
+}
+body.light input,
+body.light select {
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #888888;
+  font-size: 1rem;
+  min-width: 7.5rem;
+}
+body.light button {
+  padding: 0.25rem 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  height: 2rem;
+  line-height: 100%;
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 1px;
+}
+body.light button.tektite-main-button:not(body.light button.tektite-default-button), body.light button.tektite-cancel-button, body.light button.tektite-icon-button, body.light button.tektite-menu-button, body.light button.tektite-menu-item-button, body.light button.tektite-delete-button {
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (hover: hover) {
+  body.light button.tektite-main-button:not(body.light button.tektite-default-button):not(:hover), body.light button.tektite-cancel-button:not(:hover), body.light button.tektite-icon-button:not(:hover), body.light button.tektite-menu-button:not(:hover), body.light button.tektite-menu-item-button:not(:hover), body.light button.tektite-delete-button:not(:hover) {
+    color: #228844;
+    fill: #228844;
+    border-color: #228844;
+    background-color: #FFFFFF;
+  }
+}
+@media (hover: none) {
+  body.light button.tektite-main-button:not(body.light button.tektite-default-button), body.light button.tektite-cancel-button, body.light button.tektite-icon-button, body.light button.tektite-menu-button, body.light button.tektite-menu-item-button, body.light button.tektite-delete-button {
+    color: #228844;
+    fill: #228844;
+    border-color: #228844;
+    background-color: #FFFFFF;
+  }
+}
+@media (hover: hover) {
+  body.light button.tektite-main-button:not(body.light button.tektite-default-button):hover, body.light button.tektite-cancel-button:hover, body.light button.tektite-icon-button:hover, body.light button.tektite-menu-button:hover, body.light button.tektite-menu-item-button:hover, body.light button.tektite-delete-button:hover {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    border-color: #6F7F00;
+    background-color: #6F7F00;
+  }
+}
+body.light button.tektite-check-button {
+  cursor: pointer;
+  border-radius: 0px;
+  border-style: none;
+  border-width: 0px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  position: relative;
+  padding: 0.25rem;
+}
+@media (hover: hover) {
+  body.light button.tektite-check-button:not(:hover) {
+    color: #228844;
+    fill: #228844;
+    border-color: #228844;
+    background-color: #FFFFFF;
+  }
+}
+@media (hover: none) {
+  body.light button.tektite-check-button {
+    color: #228844;
+    fill: #228844;
+    border-color: #228844;
+    background-color: #FFFFFF;
+  }
+}
+@media (hover: hover) {
+  body.light button.tektite-check-button:hover {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    border-color: #6F7F00;
+    background-color: #6F7F00;
+  }
+}
+body.light button.tektite-check-button .tektite-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+body.light button.tektite-check-button:not(.checked) .tektite-icon {
+  visibility: hidden;
+}
+body.light button.tektite-default-button {
+  cursor: pointer;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (hover: hover) {
+  body.light button.tektite-default-button:not(:hover) {
+    border-color: #228844;
+    background-color: #228844;
+  }
+}
+@media (hover: none) {
+  body.light button.tektite-default-button {
+    border-color: #228844;
+    background-color: #228844;
+  }
+}
+@media (hover: hover) {
+  body.light button.tektite-default-button:hover {
+    border-color: #6F7F00;
+    background-color: #6F7F00;
+  }
+}
+body.light button.tektite-icon-button, body.light button.tektite-menu-button {
+  padding: 0.25rem;
+}
+@media (hover: hover) {
+  body.light button.tektite-icon-button:not(:hover), body.light button.tektite-menu-button:not(:hover) {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+@media (hover: none) {
+  body.light button.tektite-icon-button, body.light button.tektite-menu-button {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+body.light button.tektite-icon-button .tektite-icon, body.light button.tektite-menu-button .tektite-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+body.light button.tektite-delete-button {
+  cursor: pointer;
+}
+@media (hover: hover) {
+  body.light button.tektite-delete-button:not(:hover) {
+    color: #831B50;
+    fill: #831B50;
+    border-color: #831B50;
+  }
+}
+@media (hover: none) {
+  body.light button.tektite-delete-button {
+    color: #831B50;
+    fill: #831B50;
+    border-color: #831B50;
+  }
+}
+@media (hover: hover) {
+  body.light button.tektite-delete-button:hover {
+    border-color: #831B50;
+    background-color: #831B50;
+  }
+}
+body.light button.tektite-text-button {
+  margin: 0px;
+  border-radius: 0px;
+  border-style: none;
+  border-width: 0px;
+  padding: 0px;
+  cursor: pointer;
+  background-color: transparent !important;
+  text-decoration: none !important;
+  height: inherit;
+}
+@media (hover: hover) {
+  body.light button.tektite-text-button:not(:hover) {
+    color: #228844;
+    fill: #228844;
+  }
+}
+@media (hover: none) {
+  body.light button.tektite-text-button {
+    color: #228844;
+    fill: #228844;
+  }
+}
+@media (hover: hover) {
+  body.light button.tektite-text-button:hover {
+    color: #6F7F00;
+    fill: #6F7F00;
+  }
+}
+body.light button.tektite-long-button {
+  position: relative;
+  width: 100%;
+  max-width: 40rem;
+  float: center;
+}
+@keyframes tektite-white-flash {
+  0% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 0%);
+  }
+  1.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 5%);
+  }
+  2.5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 10%);
+  }
+  3.75% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 15%);
+  }
+  5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 20%);
+  }
+  6.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 25%);
+  }
+  7.5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 30%);
+  }
+  8.75% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 35%);
+  }
+  10% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 40%);
+  }
+  11.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 45%);
+  }
+  12.5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 50%);
+  }
+  13.75% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 55%);
+  }
+  15.0% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 60%);
+  }
+  16.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 65%);
+  }
+  17.5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+  }
+  18.75% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 75%);
+  }
+  20% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 80%);
+  }
+  21.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 85%);
+  }
+  22.5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 90%);
+  }
+  23.75% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 95%);
+  }
+  25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 0%, transparent 100%);
+  }
+  26.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 5%, transparent 100%);
+  }
+  27.5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 10%, transparent 100%);
+  }
+  28.75% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 15%, transparent 100%);
+  }
+  30% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 20%, transparent 100%);
+  }
+  31.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 25%, transparent 100%);
+  }
+  32.5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 30%, transparent 100%);
+  }
+  33.75% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 35%, transparent 100%);
+  }
+  35% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 40%, transparent 100%);
+  }
+  36.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 45%, transparent 100%);
+  }
+  37.5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+  }
+  38.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 55%, transparent 100%);
+  }
+  40% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 60%, transparent 100%);
+  }
+  41.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 65%, transparent 100%);
+  }
+  42.5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 70%, transparent 100%);
+  }
+  43.75% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 75%, transparent 100%);
+  }
+  45% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 80%, transparent 100%);
+  }
+  46.25% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 85%, transparent 100%);
+  }
+  47.5% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 90%, transparent 100%);
+  }
+  48.75% {
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 95%, transparent 100%);
+  }
+  50% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 0%);
+  }
+  51.25% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 5%);
+  }
+  52.5% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 10%);
+  }
+  53.75% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 15%);
+  }
+  55% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 20%);
+  }
+  56.25% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 25%);
+  }
+  57.5% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 30%);
+  }
+  58.75% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 35%);
+  }
+  60% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 40%);
+  }
+  61.25% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 45%);
+  }
+  62.5% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 50%);
+  }
+  63.75% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 55%);
+  }
+  65% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 60%);
+  }
+  66.25% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 65%);
+  }
+  67.5% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 70%);
+  }
+  68.75% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 75%);
+  }
+  70% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 80%);
+  }
+  71.25% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 85%);
+  }
+  72.5% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 90%);
+  }
+  73.75% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 95%);
+  }
+  75% {
+    background: radial-gradient(transparent 0%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  76.25% {
+    background: radial-gradient(transparent 5%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  77.5% {
+    background: radial-gradient(transparent 10%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  78.25% {
+    background: radial-gradient(transparent 15%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  80% {
+    background: radial-gradient(transparent 20%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  81.25% {
+    background: radial-gradient(transparent 25%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  82.5% {
+    background: radial-gradient(transparent 30%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  83.75% {
+    background: radial-gradient(transparent 35%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  85% {
+    background: radial-gradient(transparent 40%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  86.25% {
+    background: radial-gradient(transparent 45%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  87.5% {
+    background: radial-gradient(transparent 50%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  88.75% {
+    background: radial-gradient(transparent 55%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  90% {
+    background: radial-gradient(transparent 60%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  91.25% {
+    background: radial-gradient(transparent 65%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  92.5% {
+    background: radial-gradient(transparent 70%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  93.75% {
+    background: radial-gradient(transparent 75%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  95% {
+    background: radial-gradient(transparent 80%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  96.25% {
+    background: radial-gradient(transparent 85%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  97.5% {
+    background: radial-gradient(transparent 90%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  98.75% {
+    background: radial-gradient(transparent 95%, rgba(255, 255, 255, 0.8) 100%);
+  }
+  100% {
+    background: radial-gradient(transparent 100%, rgba(255, 255, 255, 0.8) 100%);
+  }
+}
+@keyframes tektite-accent-flash {
+  0% {
+    background: radial-gradient(#228844 0%, transparent 0%);
+  }
+  1.25% {
+    background: radial-gradient(#228844 0%, transparent 5%);
+  }
+  2.5% {
+    background: radial-gradient(#228844 0%, transparent 10%);
+  }
+  3.75% {
+    background: radial-gradient(#228844 0%, transparent 15%);
+  }
+  5% {
+    background: radial-gradient(#228844 0%, transparent 20%);
+  }
+  6.25% {
+    background: radial-gradient(#228844 0%, transparent 25%);
+  }
+  7.5% {
+    background: radial-gradient(#228844 0%, transparent 30%);
+  }
+  8.75% {
+    background: radial-gradient(#228844 0%, transparent 35%);
+  }
+  10% {
+    background: radial-gradient(#228844 0%, transparent 40%);
+  }
+  11.25% {
+    background: radial-gradient(#228844 0%, transparent 45%);
+  }
+  12.5% {
+    background: radial-gradient(#228844 0%, transparent 50%);
+  }
+  13.75% {
+    background: radial-gradient(#228844 0%, transparent 55%);
+  }
+  15.0% {
+    background: radial-gradient(#228844 0%, transparent 60%);
+  }
+  16.25% {
+    background: radial-gradient(#228844 0%, transparent 65%);
+  }
+  17.5% {
+    background: radial-gradient(#228844 0%, transparent 70%);
+  }
+  18.75% {
+    background: radial-gradient(#228844 0%, transparent 75%);
+  }
+  20% {
+    background: radial-gradient(#228844 0%, transparent 80%);
+  }
+  21.25% {
+    background: radial-gradient(#228844 0%, transparent 85%);
+  }
+  22.5% {
+    background: radial-gradient(#228844 0%, transparent 90%);
+  }
+  23.75% {
+    background: radial-gradient(#228844 0%, transparent 95%);
+  }
+  25% {
+    background: radial-gradient(#228844 0%, transparent 100%);
+  }
+  26.25% {
+    background: radial-gradient(#228844 5%, transparent 100%);
+  }
+  27.5% {
+    background: radial-gradient(#228844 10%, transparent 100%);
+  }
+  28.75% {
+    background: radial-gradient(#228844 15%, transparent 100%);
+  }
+  30% {
+    background: radial-gradient(#228844 20%, transparent 100%);
+  }
+  31.25% {
+    background: radial-gradient(#228844 25%, transparent 100%);
+  }
+  32.5% {
+    background: radial-gradient(#228844 30%, transparent 100%);
+  }
+  33.75% {
+    background: radial-gradient(#228844 35%, transparent 100%);
+  }
+  35% {
+    background: radial-gradient(#228844 40%, transparent 100%);
+  }
+  36.25% {
+    background: radial-gradient(#228844 45%, transparent 100%);
+  }
+  37.5% {
+    background: radial-gradient(#228844 50%, transparent 100%);
+  }
+  38.25% {
+    background: radial-gradient(#228844 55%, transparent 100%);
+  }
+  40% {
+    background: radial-gradient(#228844 60%, transparent 100%);
+  }
+  41.25% {
+    background: radial-gradient(#228844 65%, transparent 100%);
+  }
+  42.5% {
+    background: radial-gradient(#228844 70%, transparent 100%);
+  }
+  43.75% {
+    background: radial-gradient(#228844 75%, transparent 100%);
+  }
+  45% {
+    background: radial-gradient(#228844 80%, transparent 100%);
+  }
+  46.25% {
+    background: radial-gradient(#228844 85%, transparent 100%);
+  }
+  47.5% {
+    background: radial-gradient(#228844 90%, transparent 100%);
+  }
+  48.75% {
+    background: radial-gradient(#228844 95%, transparent 100%);
+  }
+  50% {
+    background: radial-gradient(transparent 0%, #228844 0%);
+  }
+  51.25% {
+    background: radial-gradient(transparent 0%, #228844 5%);
+  }
+  52.5% {
+    background: radial-gradient(transparent 0%, #228844 10%);
+  }
+  53.75% {
+    background: radial-gradient(transparent 0%, #228844 15%);
+  }
+  55% {
+    background: radial-gradient(transparent 0%, #228844 20%);
+  }
+  56.25% {
+    background: radial-gradient(transparent 0%, #228844 25%);
+  }
+  57.5% {
+    background: radial-gradient(transparent 0%, #228844 30%);
+  }
+  58.75% {
+    background: radial-gradient(transparent 0%, #228844 35%);
+  }
+  60% {
+    background: radial-gradient(transparent 0%, #228844 40%);
+  }
+  61.25% {
+    background: radial-gradient(transparent 0%, #228844 45%);
+  }
+  62.5% {
+    background: radial-gradient(transparent 0%, #228844 50%);
+  }
+  63.75% {
+    background: radial-gradient(transparent 0%, #228844 55%);
+  }
+  65% {
+    background: radial-gradient(transparent 0%, #228844 60%);
+  }
+  66.25% {
+    background: radial-gradient(transparent 0%, #228844 65%);
+  }
+  67.5% {
+    background: radial-gradient(transparent 0%, #228844 70%);
+  }
+  68.75% {
+    background: radial-gradient(transparent 0%, #228844 75%);
+  }
+  70% {
+    background: radial-gradient(transparent 0%, #228844 80%);
+  }
+  71.25% {
+    background: radial-gradient(transparent 0%, #228844 85%);
+  }
+  72.5% {
+    background: radial-gradient(transparent 0%, #228844 90%);
+  }
+  73.75% {
+    background: radial-gradient(transparent 0%, #228844 95%);
+  }
+  75% {
+    background: radial-gradient(transparent 0%, #228844 100%);
+  }
+  76.25% {
+    background: radial-gradient(transparent 5%, #228844 100%);
+  }
+  77.5% {
+    background: radial-gradient(transparent 10%, #228844 100%);
+  }
+  78.25% {
+    background: radial-gradient(transparent 15%, #228844 100%);
+  }
+  80% {
+    background: radial-gradient(transparent 20%, #228844 100%);
+  }
+  81.25% {
+    background: radial-gradient(transparent 25%, #228844 100%);
+  }
+  82.5% {
+    background: radial-gradient(transparent 30%, #228844 100%);
+  }
+  83.75% {
+    background: radial-gradient(transparent 35%, #228844 100%);
+  }
+  85% {
+    background: radial-gradient(transparent 40%, #228844 100%);
+  }
+  86.25% {
+    background: radial-gradient(transparent 45%, #228844 100%);
+  }
+  87.5% {
+    background: radial-gradient(transparent 50%, #228844 100%);
+  }
+  88.75% {
+    background: radial-gradient(transparent 55%, #228844 100%);
+  }
+  90% {
+    background: radial-gradient(transparent 60%, #228844 100%);
+  }
+  91.25% {
+    background: radial-gradient(transparent 65%, #228844 100%);
+  }
+  92.5% {
+    background: radial-gradient(transparent 70%, #228844 100%);
+  }
+  93.75% {
+    background: radial-gradient(transparent 75%, #228844 100%);
+  }
+  95% {
+    background: radial-gradient(transparent 80%, #228844 100%);
+  }
+  96.25% {
+    background: radial-gradient(transparent 85%, #228844 100%);
+  }
+  97.5% {
+    background: radial-gradient(transparent 90%, #228844 100%);
+  }
+  98.75% {
+    background: radial-gradient(transparent 95%, #228844 100%);
+  }
+  100% {
+    background: radial-gradient(transparent 100%, #228844 100%);
+  }
+}
+@keyframes tektite-update-progress {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+@keyframes tektite-slide-up-in {
+  0% {
+    opacity: 0;
+    max-height: 0px;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+  100% {
+    opacity: 1;
+    max-height: 6rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+@keyframes tektite-slide-down-out {
+  0% {
+    opacity: 1;
+    max-height: 6rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0px;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+}
+@keyframes tektite-fade-and-slide-out {
+  0% {
+    opacity: 1;
+    max-height: 15rem;
+    margin-bottom: 0px;
+  }
+  50% {
+    opacity: 0;
+    max-height: 15rem;
+    margin-bottom: 0px;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0rem;
+    margin-bottom: -1rem;
+  }
+}
+@keyframes tektite-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tektite-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body.light .tektite-foundation {
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px !important;
+}
+body.light .tektite-screen-cover {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px !important;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5333333333);
+  z-index: 88888;
+  height: 100vh;
+  width: 100vw;
+}
+body.light.tektite-fxxking-ipad-fullscreen .tektite-screen {
+  padding-top: 21px;
+}
+body.light .tektite-screen {
+  color: #000022;
+  fill: #000022;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px !important;
+  z-index: 0;
+  background-color: transparent;
+}
+body.light .tektite-screen > :not(.tektite-screen-body) {
+  flex-shrink: 0;
+}
+body.light .tektite-screen > header {
+  z-index: 100;
+  padding: 0rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  max-width: 100vw;
+  overflow: visible;
+  position: static;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+body.light .tektite-screen > header.tektite-segmented {
+  white-space: nowrap;
+  justify-content: start;
+}
+body.light .tektite-screen > header .tektite-icon-frame {
+  display: inline-block;
+  padding: 0.25rem;
+}
+body.light .tektite-screen > header .tektite-icon-frame .tektite-icon {
+  width: 2rem;
+  height: 2rem;
+}
+body.light .tektite-screen > header .tektite-segment {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+  position: relative;
+  font-size: 1.2rem;
+  padding-right: 1.25rem;
+  overflow-x: hidden;
+  transform: skewX(150deg);
+  text-decoration: none;
+  min-width: 2.25rem;
+}
+body.light .tektite-screen > header .tektite-segment > * {
+  transform: skewX(-150deg);
+}
+body.light .tektite-screen > header .tektite-segment:first-child {
+  min-width: 2.75rem;
+}
+body.light .tektite-screen > header .tektite-segment.tektite-label-segment {
+  cursor: default;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  background-color: #228844;
+}
+body.light .tektite-screen > header .tektite-segment:not(.tektite-label-segment) {
+  cursor: pointer;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+@media (hover: hover) {
+  body.light .tektite-screen > header .tektite-segment:not(.tektite-label-segment):not(:hover) {
+    border-color: #228844;
+    background-color: #228844;
+  }
+}
+@media (hover: none) {
+  body.light .tektite-screen > header .tektite-segment:not(.tektite-label-segment) {
+    border-color: #228844;
+    background-color: #228844;
+  }
+}
+@media (hover: hover) {
+  body.light .tektite-screen > header .tektite-segment:not(.tektite-label-segment):hover {
+    border-color: #6F7F00;
+    background-color: #6F7F00;
+  }
+}
+body.light .tektite-screen > header .tektite-segment.tektite-fill-header-segment {
+  flex-grow: 1;
+  margin-right: -3rem;
+}
+body.light .tektite-screen > header .tektite-segment:not(:hover) {
+  background-color: transparent !important;
+}
+body.light .tektite-screen > header .tektite-segment:first-child,
+body.light .tektite-screen > header .tektite-progress-bar + .tektite-segment {
+  padding-left: 1.25rem;
+  margin-left: -0.75rem;
+}
+body.light .tektite-screen > header .tektite-segment + .tektite-segment,
+body.light .tektite-screen > header .tektite-segment + .tektite-menu-popup + .tektite-segment {
+  padding-left: 0.5rem;
+  margin-left: 0rem;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #FFFFFF;
+}
+body.light .tektite-screen > header .tektite-segment + .tektite-segment .tektite-icon-frame,
+body.light .tektite-screen > header .tektite-segment + .tektite-menu-popup + .tektite-segment .tektite-icon-frame {
+  padding: 0.5rem 0.25rem;
+}
+body.light .tektite-screen > header .tektite-segment + .tektite-segment .tektite-icon-frame .tektite-icon,
+body.light .tektite-screen > header .tektite-segment + .tektite-menu-popup + .tektite-segment .tektite-icon-frame .tektite-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+body.light .tektite-screen > header .tektite-segment + .tektite-menu-popup {
+  white-space: nowrap;
+}
+@media (max-width: 780px) {
+  body.light .tektite-screen > header .tektite-segment:not(.tektite-last-segment) {
+    padding-right: 0.5rem;
+  }
+  body.light .tektite-screen > header .tektite-segment:not(.tektite-last-segment) .tektite-segment-title {
+    display: none;
+  }
+}
+body.light .tektite-screen > header button.tektite-icon-button,
+body.light .tektite-screen > header button.tektite-menu-button {
+  cursor: pointer;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  border-color: transparent !important;
+}
+@media (hover: hover) {
+  body.light .tektite-screen > header button.tektite-icon-button:not(:hover),
+  body.light .tektite-screen > header button.tektite-menu-button:not(:hover) {
+    border-color: #228844;
+    background-color: #228844;
+  }
+}
+@media (hover: none) {
+  body.light .tektite-screen > header button.tektite-icon-button,
+  body.light .tektite-screen > header button.tektite-menu-button {
+    border-color: #228844;
+    background-color: #228844;
+  }
+}
+@media (hover: hover) {
+  body.light .tektite-screen > header button.tektite-icon-button:hover,
+  body.light .tektite-screen > header button.tektite-menu-button:hover {
+    border-color: #6F7F00;
+    background-color: #6F7F00;
+  }
+}
+body.light .tektite-screen > header button.tektite-icon-button:not(:hover),
+body.light .tektite-screen > header button.tektite-menu-button:not(:hover) {
+  background-color: transparent !important;
+}
+body.light .tektite-screen > header .tektite-menu-popup:not(.tektite-segment-popup) {
+  top: 2.625rem;
+  right: 0.5rem;
+}
+body.light .tektite-screen > header .tektite-header-operator {
+  flex-grow: 1;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+body.light .tektite-screen > header .tektite-header-operator > * {
+  margin-right: 0.25rem;
+}
+body.light .tektite-screen > header .tektite-progress-bar {
+  z-index: -1;
+  position: absolute;
+  background-color: #1079C0;
+  left: 0px;
+  top: 0px;
+  height: 2.5rem;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgba(0, 0, 0, 0.3333333333);
+}
+body.light .tektite-screen > header.update .tektite-progress-bar {
+  animation-name: tektite-update-progress;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light .tektite-screen > header.max-progress .tektite-progress-bar {
+  width: 100vw;
+}
+body.light .tektite-screen > header.obsolescence .tektite-progress-bar {
+  left: initial;
+  right: 0px;
+  background-color: #888888;
+  animation-name: tektite-update-progress;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 3600s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light .tektite-screen > .tektite-screen-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-grow: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body.light .tektite-screen > .tektite-screen-body::-webkit-scrollbar {
+  display: none;
+}
+body.light .tektite-screen > .tektite-screen-body .tektite-primary-page {
+  width: 100%;
+  height: calc(100vh - 2.5rem);
+  max-height: calc(100vh - 2.5rem);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+body.light .tektite-screen > .tektite-screen-body .tektite-primary-page .tektite-page-body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 9;
+}
+body.light .tektite-screen > .tektite-screen-body .tektite-primary-page .tektite-page-footer {
+  flex-grow: 0;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+body.light .tektite-screen > .tektite-screen-body .tektite-primary-page .tektite-page-footer .tektite-down-page-link {
+  cursor: pointer;
+}
+body.light .tektite-screen > .tektite-screen-body .tektite-primary-page .tektite-page-footer .tektite-down-page-link.tektite-icon-frame {
+  opacity: 0.2;
+  width: 2rem;
+  height: 2rem;
+}
+@media (hover: hover) {
+  body.light .tektite-screen > .tektite-screen-body .tektite-primary-page .tektite-page-footer .tektite-down-page-link.tektite-icon-frame:hover {
+    opacity: 1;
+  }
+}
+body.light .tektite-screen > .tektite-screen-body .tektite-primary-page .tektite-page-footer .tektite-down-page-link:not(.tektite-reverse-down-page-link) .tektite-icon {
+  transform: scale(1, -1);
+}
+body.light .tektite-screen .tektite-screen-bar {
+  z-index: -10;
+  overflow: hidden;
+}
+body.light .tektite-screen .tektite-screen-bar.tektite-horizontal {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px !important;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgba(0, 0, 0, 0.5333333333);
+}
+body.light .tektite-screen .tektite-screen-bar.tektite-vertical {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  margin: 0px !important;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.5333333333);
+}
+body.light .tektite-screen-toast {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px !important;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 0.5rem);
+  pointer-events: none;
+  filter: drop-shadow(0rem 0rem 1rem #228844);
+}
+body.light .tektite-screen-toast > *:not(:first-child) {
+  margin-top: 0.5rem;
+}
+body.light .tektite-screen-toast:empty {
+  display: none;
+}
+body.light .tektite-screen-toast > * {
+  pointer-events: all;
+}
+body.light .tektite-screen-toast .tektite-item {
+  filter: drop-shadow(0rem 0rem 0.3rem #228844);
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #228844;
+  background-color: #FFFFFFEE;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  max-width: 64rem;
+}
+body.light .tektite-screen-toast .tektite-item > button:first-child:not(:last-child), body.light .tektite-screen-toast .tektite-item > div:first-child:not(:last-child), body.light .tektite-screen-toast .tektite-item > span:first-child:not(:last-child) {
+  min-width: 25%;
+  max-width: 25%;
+  text-align: left;
+}
+body.light .tektite-screen-toast .tektite-item > button:not(:first-child):not(:last-child), body.light .tektite-screen-toast .tektite-item > div:not(:first-child):not(:last-child), body.light .tektite-screen-toast .tektite-item > span:not(:first-child):not(:last-child) {
+  min-width: 50%;
+  max-width: 50%;
+  text-align: center;
+}
+body.light .tektite-screen-toast .tektite-item > button:last-child:not(:first-child), body.light .tektite-screen-toast .tektite-item > div:last-child:not(:first-child), body.light .tektite-screen-toast .tektite-item > span:last-child:not(:first-child) {
+  min-width: 25%;
+  max-width: 25%;
+  text-align: right;
+}
+body.light .tektite-screen-toast .tektite-item > button:first-child:last-child, body.light .tektite-screen-toast .tektite-item > div:first-child:last-child, body.light .tektite-screen-toast .tektite-item > span:first-child:last-child {
+  max-width: 100%;
+  text-align: left;
+}
+body.light.tektite-apple-mobile-web-app .tektite-screen-toast {
+  padding-bottom: 1.25rem;
+}
+body.light.tektite-style-modern #tektite-screen-header {
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  background-color: #00002211;
+}
+@supports (backdrop-filter: blur(1rem)) {
+  body.light.tektite-style-modern #tektite-screen-header {
+    margin-bottom: -2.5rem;
+  }
+}
+@media (hover: hover) {
+  body.light.tektite-style-modern #tektite-screen-header > button:hover {
+    background-color: #FFFFFF22;
+  }
+}
+@media (hover: hover) {
+  body.light.tektite-style-modern .tektite-segment:not(.tektite-label-segment):hover {
+    background-color: #FFFFFF11;
+  }
+}
+body.light.tektite-style-modern .tektite-segment + .tektite-segment,
+body.light.tektite-style-modern .tektite-segment + .tektite-menu-popup + .tektite-segment {
+  border-left-color: #FFFFFF44 !important;
+}
+body.light.tektite-style-modern .tektite-screen-body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@supports (backdrop-filter: blur(1rem)) {
+  body.light.tektite-style-modern .tektite-screen-body {
+    padding-top: 2.5rem;
+  }
+}
+body.light.tektite-style-modern .tektite-screen-body::-webkit-scrollbar {
+  display: none;
+}
+body.light.tektite-style-modern .tektite-primary-page {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+@media (hover: hover) {
+  body.light.tektite-style-modern .tektite-primary-page button.tektite-main-button.tektite-default-button:not(:hover) {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    background-color: transparent;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border-color: #FFFFFF;
+  }
+}
+@media (hover: none) {
+  body.light.tektite-style-modern .tektite-primary-page button.tektite-main-button.tektite-default-button {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    background-color: transparent;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border-color: #FFFFFF;
+  }
+}
+body.light.tektite-style-modern .tektite-primary-page button.tektite-main-button:not(.tektite-default-button) {
+  font-weight: normal;
+}
+@media (hover: hover) {
+  body.light.tektite-style-modern .tektite-primary-page button.tektite-main-button:not(.tektite-default-button):not(:hover) {
+    color: #FFFFFFEE;
+    fill: #FFFFFFEE;
+    background-color: transparent;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border-color: #FFFFFF88;
+  }
+}
+@media (hover: none) {
+  body.light.tektite-style-modern .tektite-primary-page button.tektite-main-button:not(.tektite-default-button) {
+    color: #FFFFFFEE;
+    fill: #FFFFFFEE;
+    background-color: transparent;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border-color: #FFFFFF88;
+  }
+}
+@media (hover: hover) {
+  body.light.tektite-style-modern .tektite-primary-page button.tektite-main-button.tektite-default-button:hover, body.light.tektite-style-modern .tektite-primary-page button.tektite-main-button:not(.tektite-default-button):hover {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    background-color: #00002222;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border-color: #FFFFFF;
+  }
+}
+body.light.tektite-style-modern .tektite-trail-page {
+  background-color: #FFFFFFBB;
+}
+body.light.tektite-style-modern .tektite-screen-bar-flash-layer {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px !important;
+  animation-name: white-flash;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light.tektite-style-modern .bare-popup,
+body.light.tektite-style-modern .tektite-popup,
+body.light.tektite-style-modern .tektite-menu-popup {
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  background-color: #00002211;
+}
+body.light.tektite-style-modern .bare-popup button,
+body.light.tektite-style-modern .tektite-popup button,
+body.light.tektite-style-modern .tektite-menu-popup button {
+  opacity: 0.7;
+}
+body.light.tektite-style-modern .bare-popup button:not(.tektite-delete-button),
+body.light.tektite-style-modern .tektite-popup button:not(.tektite-delete-button),
+body.light.tektite-style-modern .tektite-menu-popup button:not(.tektite-delete-button) {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+@media (hover: hover) {
+  body.light.tektite-style-modern .bare-popup button:not(.tektite-delete-button):hover,
+  body.light.tektite-style-modern .tektite-popup button:not(.tektite-delete-button):hover,
+  body.light.tektite-style-modern .tektite-menu-popup button:not(.tektite-delete-button):hover {
+    background-color: #6F7F00;
+  }
+}
+body.light.tektite-style-modern .bare-popup button.tektite-delete-button,
+body.light.tektite-style-modern .tektite-popup button.tektite-delete-button,
+body.light.tektite-style-modern .tektite-menu-popup button.tektite-delete-button {
+  cursor: pointer;
+}
+@media (hover: hover) {
+  body.light.tektite-style-modern .bare-popup button.tektite-delete-button:not(:hover),
+  body.light.tektite-style-modern .tektite-popup button.tektite-delete-button:not(:hover),
+  body.light.tektite-style-modern .tektite-menu-popup button.tektite-delete-button:not(:hover) {
+    color: #C2001C;
+    fill: #C2001C;
+    border-color: #C2001C;
+  }
+}
+@media (hover: none) {
+  body.light.tektite-style-modern .bare-popup button.tektite-delete-button,
+  body.light.tektite-style-modern .tektite-popup button.tektite-delete-button,
+  body.light.tektite-style-modern .tektite-menu-popup button.tektite-delete-button {
+    color: #C2001C;
+    fill: #C2001C;
+    border-color: #C2001C;
+  }
+}
+@media (hover: hover) {
+  body.light.tektite-style-modern .bare-popup button.tektite-delete-button:hover,
+  body.light.tektite-style-modern .tektite-popup button.tektite-delete-button:hover,
+  body.light.tektite-style-modern .tektite-menu-popup button.tektite-delete-button:hover {
+    border-color: #C2001C;
+    background-color: #C2001C;
+  }
+}
+@media (hover: hover) {
+  body.light.tektite-style-modern .bare-popup button:not(.tektite-current-item):not(.tektite-default-button):not(:hover),
+  body.light.tektite-style-modern .tektite-popup button:not(.tektite-current-item):not(.tektite-default-button):not(:hover),
+  body.light.tektite-style-modern .tektite-menu-popup button:not(.tektite-current-item):not(.tektite-default-button):not(:hover) {
+    background-color: transparent;
+  }
+}
+@media (hover: none) {
+  body.light.tektite-style-modern .bare-popup button:not(.tektite-current-item):not(.tektite-default-button),
+  body.light.tektite-style-modern .tektite-popup button:not(.tektite-current-item):not(.tektite-default-button),
+  body.light.tektite-style-modern .tektite-menu-popup button:not(.tektite-current-item):not(.tektite-default-button) {
+    background-color: transparent;
+  }
+}
+body.light .tektite-menu-button-list,
+body.light .tektite-check-button-list {
+  display: flex;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: column;
+}
+body.light .tektite-menu-button-list button,
+body.light .tektite-check-button-list button {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(128, 128, 128, 0.5);
+}
+body.light .tektite-horizontal-button-list {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.5rem;
+}
+body.light .tektite-horizontal-button-list > * {
+  margin: 0.5rem;
+}
+body.light .tektite-horizontal-button-list > * {
+  width: 100%;
+  max-width: 40rem;
+}
+body.light .tektite-vertical-button-list {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+body.light .tektite-vertical-button-list > * {
+  margin: 0.5rem;
+}
+body.light .tektite-vertical-button-list > * {
+  width: 100%;
+  max-width: 40rem;
+}
+body.light .tektite-button-line {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+body.light .tektite-button-line button + .tektite-menu-button {
+  margin-left: -1rem;
+}
+body.light .tektite-button-line .tektite-menu-popup {
+  right: 4px;
+}
+@media (min-width: 640px) {
+  body.light .tektite-button-line .tektite-menu-popup {
+    right: calc(50vw - 20rem);
+  }
+}
+body.light .tektite-row-flex-list,
+body.light .tektite-column-flex-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: stretch;
+  width: 100%;
+}
+body.light .tektite-row-flex-list:not(.empty-list),
+body.light .tektite-column-flex-list:not(.empty-list) {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(128, 128, 128, 0.5);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: rgba(128, 128, 128, 0.5);
+}
+body.light .tektite-row-flex-list {
+  flex-direction: row;
+}
+body.light .tektite-column-flex-list {
+  flex-direction: column;
+}
+body.light .tektite-flex-item {
+  position: relative;
+  display: inline-block;
+  min-width: 100%;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgba(128, 128, 128, 0.5);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(128, 128, 128, 0.5);
+}
+@media (min-width: 780px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 2);
+  }
+}
+@media (min-width: 1170px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 3);
+  }
+}
+@media (min-width: 1560px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 4);
+  }
+}
+@media (min-width: 1950px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 5);
+  }
+}
+@media (min-width: 2340px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 6);
+  }
+}
+@media (min-width: 2730px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 7);
+  }
+}
+@media (min-width: 3120px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 8);
+  }
+}
+@media (min-width: 3510px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 9);
+  }
+}
+@media (min-width: 3900px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 10);
+  }
+}
+@media (min-width: 4290px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 11);
+  }
+}
+@media (min-width: 4680px) {
+  body.light .tektite-flex-item {
+    min-width: calc((100% - 1px) / 12);
+  }
+}
+body.light .tektite-max-column-1 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 1);
+  max-width: calc((100% - 1px) / 1);
+}
+body.light .tektite-max-column-2 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 2);
+  max-width: calc((100% - 1px) / 2);
+}
+body.light .tektite-max-column-3 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 3);
+  max-width: calc((100% - 1px) / 3);
+}
+body.light .tektite-max-column-4 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 4);
+  max-width: calc((100% - 1px) / 4);
+}
+body.light .tektite-max-column-5 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 5);
+  max-width: calc((100% - 1px) / 5);
+}
+body.light .tektite-max-column-6 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 6);
+  max-width: calc((100% - 1px) / 6);
+}
+body.light .tektite-max-column-7 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 7);
+  max-width: calc((100% - 1px) / 7);
+}
+body.light .tektite-max-column-8 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 8);
+  max-width: calc((100% - 1px) / 8);
+}
+body.light .tektite-max-column-9 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 9);
+  max-width: calc((100% - 1px) / 9);
+}
+body.light .tektite-max-column-10 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 10);
+  max-width: calc((100% - 1px) / 10);
+}
+body.light .tektite-max-column-11 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 11);
+  max-width: calc((100% - 1px) / 11);
+}
+body.light .tektite-max-column-12 .tektite-flex-item {
+  min-width: calc((100% - 1px) / 12);
+  max-width: calc((100% - 1px) / 12);
+}
+body.light .tektite-title-item {
+  position: relative;
+}
+body.light .tektite-item-header {
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body.light .tektite-item-header .item-title {
+  max-width: calc(100% - 180px);
+}
+body.light .tektite-item-title {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+  font-size: 1.2rem;
+  line-height: 1.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 1.4em;
+  margin-right: -7.5rem;
+  color: #000022;
+  fill: #000022;
+}
+body.light .tektite-item-title .tektite-icon {
+  width: 1.5em;
+  min-width: 1.4em;
+  height: 1.4em;
+  min-height: 1.4em;
+  margin-right: 0.25rem;
+}
+body.light .tektite-item-operator {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+body.light .tektite-item-operator > button {
+  display: inline-block;
+  margin: 0px;
+}
+body.light .tektite-item-operator > button + button {
+  margin-left: 0.25rem;
+}
+body.light .tektite-item-information {
+  background-color: #88888844;
+  padding: 0.5rem;
+  margin: 0px;
+}
+body.light .tektite-item-information * {
+  line-height: 1.4em;
+}
+body.light .tektite-item-information .label {
+  font-size: 1rem;
+  opacity: 0.4;
+  margin-right: -50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: calc(100% - 180px);
+}
+body.light .tektite-item-information .label::after {
+  content: ":";
+}
+body.light .tektite-item-information .value {
+  font-size: 1rem;
+  opacity: 0.4;
+  float: right;
+}
+body.light .tektite-item-panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 0;
+}
+body.light .tektite-item-panel .item-panel-body {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  position: relative;
+  z-index: 20;
+  padding: 1rem;
+}
+body.light .tektite-item-panel .item-panel-body .item-utc-offset .value {
+  opacity: 0.666;
+  font-size: 1rem;
+  line-height: 140%;
+}
+body.light .tektite-item-panel .item-panel-body .item-date .value {
+  opacity: 0.666;
+  font-size: 1rem;
+  line-height: 140%;
+}
+body.light .tektite-item-panel .item-panel-body .item-time .value {
+  font-size: 2rem;
+  line-height: 140%;
+}
+body.light .tektite-item-panel .item-time-bar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgba(0, 0, 0, 0.3333333333);
+  z-index: 10;
+}
+body.light .tektite-popup {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-color: #228844;
+  background-color: #FFFFFF;
+  overflow: auto;
+  min-width: 15rem;
+  max-width: calc(100vw - 1rem);
+}
+body.light .tektite-popup .tektite-popup-operator {
+  width: 100%;
+}
+body.light .tektite-popup .tektite-popup-operator > * {
+  margin: 0.25rem;
+}
+body.light .tektite-popup .tektite-popup-operator .tektite-cancel-button {
+  float: left;
+  border-color: transparent;
+}
+body.light .tektite-popup .tektite-popup-operator .tektite-default-button {
+  float: right;
+  min-width: 120px;
+}
+body.light .tektite-form > * {
+  width: calc(100% - 0.5rem);
+  margin: 0.25rem;
+}
+body.light.tektite-sleep-mouse {
+  cursor: none;
+}
+body.light.tektite-sleep-mouse * {
+  cursor: none !important;
+}
+body.light.tektite-flash.tektite-style-modern .tektite-screen {
+  animation-name: tektite-white-flash;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light.tektite-flash.tektite-style-classic .tektite-screen {
+  animation-name: tektite-accent-flash;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light .tektite-slide-up-in {
+  animation-name: tektite-slide-up-in;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light .tektite-slide-down-out {
+  animation-name: tektite-slide-down-out;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  overflow-y: hidden;
+}
+body.light .tektite-slow-slide-down-out {
+  animation-name: tektite-slide-down-out;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  overflow-y: hidden;
+  animation-duration: 0.5s;
+}
+body.light .tektite-fade-and-slide-out {
+  animation-name: tektite-fade-and-slide-out;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light .tektite-fade-in {
+  animation-name: tektite-fade-in;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light .tektite-fade-out {
+  animation-name: tektite-fade-out;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light .tektite-hide {
+  display: none;
+}
+body.light .tektite-monospace {
+  font-family: monospace;
+}
+body.light .tektite-locale-parallel-on .locale-map {
+  display: none;
+}
+body.light .tektite-locale-parallel-on .locale-parallel {
+  display: initial;
+}
+body.light .tektite-locale-parallel-off .locale-map,
+body.light .tektite-menu-popup .locale-map {
+  display: initial;
+}
+body.light .tektite-locale-parallel-off .locale-parallel,
+body.light .tektite-menu-popup .locale-parallel {
+  display: none;
+}
+body.light .tektite-menu-popup {
+  position: absolute;
+  top: calc(10px + 1.5rem);
+  right: 0rem;
+  z-index: 99999;
+}
+body.light .tektite-menu-popup:not(.show) {
+  display: none;
+}
+body.light .tektite-menu-popup,
+body.light .bare-popup {
+  max-height: calc(100vh - 10rem);
+  overflow: hidden;
+  overflow-y: auto;
+  color: #228844;
+  fill: #228844;
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+}
+body.light .tektite-menu-popup, body.light .tektite-menu-popup > a,
+body.light .bare-popup,
+body.light .bare-popup > a {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+body.light .tektite-menu-popup .tektite-menu-item-button,
+body.light .bare-popup .tektite-menu-item-button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+  border-radius: 0px;
+  border-style: none;
+  border-width: 0px;
+  min-height: 2.25rem;
+  font-size: 1.2rem;
+  text-align: left;
+  text-decoration: none;
+}
+body.light .tektite-menu-popup .tektite-menu-item-button > *:not(:first-child),
+body.light .bare-popup .tektite-menu-item-button > *:not(:first-child) {
+  margin-left: 0.5rem;
+}
+body.light .tektite-menu-popup .tektite-menu-item-button .tektite-icon,
+body.light .bare-popup .tektite-menu-item-button .tektite-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+body.light .tektite-menu-popup .tektite-menu-item-button.tektite-current-item,
+body.light .bare-popup .tektite-menu-item-button.tektite-current-item {
+  cursor: pointer;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+@media (hover: hover) {
+  body.light .tektite-menu-popup .tektite-menu-item-button.tektite-current-item:not(:hover),
+  body.light .bare-popup .tektite-menu-item-button.tektite-current-item:not(:hover) {
+    border-color: #228844;
+    background-color: #228844;
+  }
+}
+@media (hover: none) {
+  body.light .tektite-menu-popup .tektite-menu-item-button.tektite-current-item,
+  body.light .bare-popup .tektite-menu-item-button.tektite-current-item {
+    border-color: #228844;
+    background-color: #228844;
+  }
+}
+@media (hover: hover) {
+  body.light .tektite-menu-popup .tektite-menu-item-button.tektite-current-item:hover,
+  body.light .bare-popup .tektite-menu-item-button.tektite-current-item:hover {
+    border-color: #6F7F00;
+    background-color: #6F7F00;
+  }
+}
+body.light .tektite-menu-popup .tektite-menu-item-button > .label + .value,
+body.light .bare-popup .tektite-menu-item-button > .label + .value {
+  text-align: right;
+  flex-grow: 1;
+}
+body.light .tektite-menu-popup .tektite-menu-item-button:not(.tektite-current-item):not(:hover) > .label + .value,
+body.light .bare-popup .tektite-menu-item-button:not(.tektite-current-item):not(:hover) > .label + .value {
+  color: #888888;
+  fill: #888888;
+}
+body.light .tektite-menu-popup a button,
+body.light .bare-popup a button {
+  width: 100%;
+}
+body.light .tektite-menu-popup.tektite-fade-in,
+body.light .bare-popup.tektite-fade-in {
+  animation-name: tektite-fade-in;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light .tektite-menu-popup.tektite-fade-out,
+body.light .bare-popup.tektite-fade-out {
+  animation-name: tektite-fade-out;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+body.light .tektite-menu-item-button {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0px;
+  border-style: none;
+  border-width: 0px;
+}
+body.light div {
+  content-visibility: auto;
+}
+
+_::-webkit-full-page-media, _:future, :root .tektite-screen > header {
+  margin-bottom: -2.5rem;
+}
+
+_::-webkit-full-page-media, _:future, :root .tektite-screen > .tektite-screen-body {
+  padding-top: 2.5rem;
+}
+
+/*# sourceMappingURL=theme.light.css.map */
