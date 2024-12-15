@@ -23,7 +23,7 @@ export module Type
     };
     export type ApplicationType = keyof typeof applicationList;
     export const applicationIdList = Object.freeze(minamo.core.objectKeys(applicationList));
-    export type StyleEntry = flounderStyle.Arguments & minamo.core.JsonableObject;
+    export type StyleEntry = flounderStyle.Type.Arguments & minamo.core.JsonableObject;
     export type SvgEntry = string;
     export type PageItemType = StyleEntry | SvgEntry;
     export interface ApplicationEntry//<ItemType>
