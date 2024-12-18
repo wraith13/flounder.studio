@@ -1,5 +1,5 @@
 import { Tektite } from "tektite.js/script/tektite-index";
-import { flounderStyle } from "flounder.style.js";
+import { FlounderStyle } from "flounder.style.js";
 import resource from "@resource/images.json";
 import tektiteResource from "tektite.js/images.json";
 import { minamo } from "minamo.js";
@@ -23,7 +23,7 @@ export module Type
     };
     export type ApplicationType = keyof typeof applicationList;
     export const applicationIdList = Object.freeze(minamo.core.objectKeys(applicationList));
-    export type StyleEntry = flounderStyle.Type.Arguments & minamo.core.JsonableObject;
+    export type StyleEntry = FlounderStyle.Type.Arguments & minamo.core.JsonableObject;
     export type SvgEntry = string;
     export type PageItemType = StyleEntry | SvgEntry;
     export interface ApplicationEntry//<ItemType>
