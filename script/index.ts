@@ -1,5 +1,5 @@
 import { minamo } from "minamo.js";
-import { flounderStyle } from "flounder.style.js";
+import { FlounderStyle } from "flounder.style.js";
 import { Tektite } from "tektite.js/script/tektite-index";
 import { TektiteDate } from "tektite.js/script/tektite-date";
 import { ViewModel } from "tektite.js/script/tektite-view-model.js";
